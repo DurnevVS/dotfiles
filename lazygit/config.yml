@@ -1,0 +1,18 @@
+os:
+  editPreset: "vscode"
+
+gui:
+  theme:
+    activeBorderColor:
+      - '#ffcc66'
+      - bold
+    
+    inactiveBorderColor:
+      - '#636d7e'
+
+    selectedLineBgColor:
+      - '#293040'
+
+keybinding:
+  universal:
+    quit: <c-w>
