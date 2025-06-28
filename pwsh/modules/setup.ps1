@@ -12,7 +12,7 @@ if (-not (Get-CommandIsInstalled winget)) {
 
 $programsFolder = Get-ChildItem -Path $PSScriptRoot .\programs
 foreach ($script in Get-ChildItem $programsFolder) {
-    . $script.FullName
+    . $script
 }
 
 . $PSScriptRoot\key-bindings.ps1
