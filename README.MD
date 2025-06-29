@@ -14,20 +14,12 @@ cd dotfiles
     - yazi
     - edit
 
-
 - Тулинг git
-    - lazygit
     - github cli
-
 
 - Тулинг Python
     - uv + autocompletions
     - pyvenv-switcher
-
-
-- Тулинг .NET
-    - dotnet cli + autocompletions
-
 
 - Кастомные алиасы и горячие клавиши
 

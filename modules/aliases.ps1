@@ -1,7 +1,5 @@
-if (-not (Get-CommandIsInstalled yazi) -and $wingetInstalled) {
-    winget install sxyazi.yazi Gyan.FFmpeg 7zip.7zip jqlang.jq sharkdp.fd BurntSushi.ripgrep.MSVC junegunn.fzf ajeetdsouza.zoxide ImageMagick.ImageMagick
-}
-function e {
+function Invoke-Eza { eza --icons=always --all $args }
+function Invoke-Yazi {
     $tmp = [System.IO.Path]::GetTempFileName()
     yazi $args --cwd-file="$tmp"
     $cwd = Get-Content -Path $tmp -Encoding UTF8
@@ -11,3 +9,8 @@ function e {
     }
     Remove-Item -Path $tmp
 }
+
+Set-Alias -Name ls -Value Invoke-Eza
+Set-Alias -Name e -Value Invoke-Yazi
+Set-Alias -Name cd -Value Set-LocationVenv -Option AllScope
+Set-Alias -Name ed -Value edit
